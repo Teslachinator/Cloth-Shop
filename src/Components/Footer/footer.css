@@ -1,0 +1,53 @@
+footer {
+  margin-top: auto;
+  height: 260px;
+  width: 100%;
+
+  background: #e9e4e4;
+}
+
+.main-Foot {
+  display: flex;
+  padding-top: 39px;
+  text-align: left;
+  justify-content: center;
+  gap: 129px;
+  flex-direction: row;
+}
+.main-Foot p {
+  text-transform: uppercase;
+}
+
+.catalog,
+.help,
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog {
+}
+
+.help {
+}
+
+.about {
+}
+
+.main-Foot p {
+  margin-bottom: 15px;
+  color: #989898;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.catalog li,
+.help li,
+.about li {
+  margin-bottom: 10px;
+  color: #989898;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}

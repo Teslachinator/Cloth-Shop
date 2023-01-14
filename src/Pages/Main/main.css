@@ -1,0 +1,94 @@
+.main {
+  padding: 0 50px;
+  width: 1300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slider_logo {
+  display: flex;
+  justify-content: center;
+  height: 146px;
+  margin-bottom: 20px;
+}
+
+.sweaters {
+  letter-spacing: 0.72em;
+}
+.accessories {
+  letter-spacing: 0.22em;
+}
+.cardigans {
+  letter-spacing: 0.34em;
+}
+
+.slider_logo p {
+  text-align: "." justify;
+  width: 1168px;
+
+  font-weight: 800;
+  font-size: 120px;
+  line-height: 146px;
+}
+h3 {
+  display: flex;
+
+  align-items: center;
+  margin: auto 0;
+  height: 70px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  background: url(./../../img/svg/Ellipse.svg) left no-repeat;
+}
+.aboutProd {
+  display: flex;
+  height: 575px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 110px;
+}
+
+.text p {
+  width: 280px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  margin-bottom: 5px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+.bottom p {
+  text-align: left;
+  max-width: 268px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.sweatersPhotos {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+
+.sweatersPhotos img {
+  position: relative;
+}
+.sweatersPhotos img:nth-child(1) {
+  top: 150px;
+  right: -240px;
+}
+.sweatersPhotos img:nth-child(2) {
+  top: -150px;
+  right: -100px;
+  z-index: 2;
+}
+.sweatersPhotos img:nth-child(3) {
+  z-index: 1;
+}

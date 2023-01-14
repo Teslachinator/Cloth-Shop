@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: center;
+  height: 44px;
+  text-align: center;
+  font-weight: 300;
+  margin: 23px 0;
+}
+.header_logo {
+  font-weight: 200;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.1em;
+}
+.header {
+  width: 1150px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.header li {
+  font-weight: 300;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+/* .active-head {
+  font-weight: 500;
+} */
