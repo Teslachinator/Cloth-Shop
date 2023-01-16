@@ -1,8 +1,6 @@
 import React from "react";
 import BtnCatalog from "../../Components/BtnCatalog";
-import MainAccessories from "./MainAccessories";
-import MainCardigans from "./MainCardigans";
-import MainSweaters from "./MainSweaters";
+
 import "./main.css";
 
 import ph1 from "./../../img/mainPhoto/image 1.png";
@@ -15,7 +13,6 @@ import ph9 from "./../../img/mainPhoto/image 7.png";
 import ph8 from "./../../img/mainPhoto/image 8.png";
 import ph7 from "./../../img/mainPhoto/image 9.png";
 
-import styled from "styled-components";
 import Carousel from "../../Helpers/Carousel";
 
 const mainCategory = [
@@ -50,33 +47,35 @@ const mainCategory = [
 
 const Main = () => {
   return (
-    <Carousel>
+    <Carousel infinite>
       {mainCategory.map((p, index) => {
         return (
-          <div key={index} className="main">
-            <div className="slider_logo">{p.title}</div>
-            <div className="aboutProd">
-              <div>
-                <h3>О продукте:</h3>
-                <p className="text">
-                  <p>{p.about}</p>
+          <Carousel.Page>
+            <div key={index} className="main">
+              <div className="slider_logo">{p.title}</div>
+              <div className="aboutProd">
+                <div>
+                  <h3>О продукте:</h3>
+                  <p className="text">
+                    <p>{p.about}</p>
+                  </p>
+                </div>
+
+                <div className="sweatersPhotos">
+                  <img className="photo1" src={p.photo1} alt="#" />
+                  <img className="photo2" src={p.photo2} alt="#" />
+                  <img className="photo3" src={p.photo3} alt="#" />
+                </div>
+              </div>
+
+              <div className="bottom">
+                <p>
+                  Состав: <br /> {p.composition}
                 </p>
-              </div>
-
-              <div className="sweatersPhotos">
-                <img className="photo1" src={p.photo1} alt="#" />
-                <img className="photo2" src={p.photo2} alt="#" />
-                <img className="photo3" src={p.photo3} alt="#" />
+                <BtnCatalog />
               </div>
             </div>
-
-            <div className="bottom">
-              <p>
-                Состав: <br /> {p.composition}
-              </p>
-              <BtnCatalog />
-            </div>
-          </div>
+          </Carousel.Page>
         );
       })}
     </Carousel>

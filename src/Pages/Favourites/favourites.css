@@ -1,0 +1,14 @@
+.favourite {
+  background: url(./../../img/svg/illustration.png) no-repeat bottom;
+  background-position: 60% 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.favourite_title {
+  display: flex;
+  justify-content: space-between;
+}
+.zeroLikes {
+  height: 250px;
+}

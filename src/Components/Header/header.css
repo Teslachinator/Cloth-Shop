@@ -23,8 +23,10 @@ header {
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  letter-spacing: 0.16em;
 }
 
-/* .active-head {
+.active-head {
   font-weight: 500;
-} */
+  border-bottom: 1px solid black;
+}
