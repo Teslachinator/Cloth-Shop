@@ -6,8 +6,8 @@ import React, {
   useState,
 } from "react";
 import styled from "styled-components";
-import left from "./../img/svg/IconL.svg";
-import right from "./../img/svg/IconR.svg";
+import left from "./../../img/svg/IconL.svg";
+import right from "./../../img/svg/IconR.svg";
 import { CarouselContext } from "./carousel-context";
 import { Page } from "./Page";
 

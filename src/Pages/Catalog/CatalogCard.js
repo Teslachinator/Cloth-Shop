@@ -22,22 +22,20 @@ const CardName = styled(Card)`
   margin: 18px 0;
 `;
 
+// const CardSaleZeroPrice = styled(Card)`
+//   display: none;
+// `;
 const CardSalePrice = styled(Card)`
   text-decoration: line-through;
   color: #989898;
+  margin-right: 10px;
 `;
 const CardPrice = styled(Card)`
   display: flex;
   flex-direction: row;
-  gap: 10px;
 `;
 
 const CatalogCard = ({ image, name, sale, price }) => {
-  // if (sale === 0) {
-  //   CardSalePrice = styled.div`
-  //     display: none;
-  //   `;
-  // }
   return (
     <Card>
       <CardImg src={image} alt="@" />

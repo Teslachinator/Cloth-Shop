@@ -19,8 +19,10 @@ const CatalogSweaters = styled.div`
 `;
 
 const CatalogSortTab = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 33px;
 `;
 
 const Catalog = () => {
@@ -35,6 +37,7 @@ const Catalog = () => {
               image={p.image}
               price={p.price}
               name={p.name}
+              key={p.id}
             />
           );
         })}

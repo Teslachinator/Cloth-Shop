@@ -13,16 +13,22 @@ import ph9 from "./../../img/mainPhoto/image 7.png";
 import ph8 from "./../../img/mainPhoto/image 8.png";
 import ph7 from "./../../img/mainPhoto/image 9.png";
 
-import Carousel from "../../Helpers/Carousel";
-
+import Carousel from "../../Helpers/Corusel/Carousel";
 const mainCategory = [
   {
     title: <p className="sweaters">СВИТЕРЫ</p>,
     photo1: ph1,
     photo2: ph2,
     photo3: ph3,
-    about:
-      "Свитеры вяжутся из пряжи состоящей на 100% из шерсти. Производится вся нужная обработка изделия. Полностью ручная работа авторские дизайны Любовь к клиентам",
+    about: (
+      <p className="about">
+        <span>Свитеры вяжутся из пряжи состоящей на 100% из шерсти.</span>{" "}
+        <br />
+        <span>Производится вся нужная обработка изделия.</span> <br />
+        <span>Полностью ручная работа авторские дизайны.</span> <br /> Любовь к
+        клиентам.
+      </p>
+    ),
     composition: "100% натуральная пряжа",
   },
   {
@@ -30,8 +36,15 @@ const mainCategory = [
     photo1: ph4,
     photo2: ph5,
     photo3: ph6,
-    about:
-      "Свитеры вяжутся из пряжи состоящей на 100% из шерсти. Производится вся нужная обработка изделия. Полностью ручная работа авторские дизайны Любовь к клиентам",
+    about: (
+      <p className="about">
+        <span>Свитеры вяжутся из пряжи состоящей на 100% из шерсти.</span>{" "}
+        <br />
+        <span>Производится вся нужная обработка изделия.</span> <br />
+        <span>Полностью ручная работа авторские дизайны.</span> <br /> Любовь к
+        клиентам.
+      </p>
+    ),
     composition: "100% натуральная пряжа",
   },
   {
@@ -39,8 +52,15 @@ const mainCategory = [
     photo1: ph7,
     photo2: ph8,
     photo3: ph9,
-    about:
-      "Свитеры вяжутся из пряжи состоящей на 100% из шерсти. Производится вся нужная обработка изделия. Полностью ручная работа авторские дизайны Любовь к клиентам",
+    about: (
+      <p className="about">
+        <span>Свитеры вяжутся из пряжи состоящей на 100% из шерсти.</span>{" "}
+        <br />
+        <span>Производится вся нужная обработка изделия.</span> <br />
+        <span>Полностью ручная работа авторские дизайны.</span> <br /> Любовь к
+        клиентам.
+      </p>
+    ),
     composition: "100% натуральная пряжа",
   },
 ];
@@ -56,9 +76,8 @@ const Main = () => {
               <div className="aboutProd">
                 <div>
                   <h3>О продукте:</h3>
-                  <p className="text">
-                    <p>{p.about}</p>
-                  </p>
+                  {p.about}
+                  {/* <p className="text">{p.about}</p> */}
                 </div>
 
                 <div className="sweatersPhotos">
