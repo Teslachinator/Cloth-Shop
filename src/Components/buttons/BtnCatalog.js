@@ -1,5 +1,5 @@
 import React from "react";
-import arrow from "./../img/svg/ArrowL.svg";
+import arrow from "./../../img/svg/ArrowL.svg";
 import styled from "styled-components";
 
 export const Btn = styled.a`

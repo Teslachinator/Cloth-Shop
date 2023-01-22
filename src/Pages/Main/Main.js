@@ -1,5 +1,5 @@
 import React from "react";
-import BtnCatalog from "../../Components/BtnCatalog";
+import BtnCatalog from "../../Components/buttons/BtnCatalog";
 
 import "./main.css";
 
@@ -16,6 +16,7 @@ import ph7 from "./../../img/mainPhoto/image 9.png";
 import Carousel from "../../Helpers/Corusel/Carousel";
 const mainCategory = [
   {
+    id: 1221,
     title: <p className="sweaters">СВИТЕРЫ</p>,
     photo1: ph1,
     photo2: ph2,
@@ -32,6 +33,7 @@ const mainCategory = [
     composition: "100% натуральная пряжа",
   },
   {
+    id: 1222,
     title: <p className="accessories">АКСЕССУАРЫ</p>,
     photo1: ph4,
     photo2: ph5,
@@ -48,6 +50,7 @@ const mainCategory = [
     composition: "100% натуральная пряжа",
   },
   {
+    id: 1223,
     title: <p className="cardigans">КАРДИГАНЫ</p>,
     photo1: ph7,
     photo2: ph8,

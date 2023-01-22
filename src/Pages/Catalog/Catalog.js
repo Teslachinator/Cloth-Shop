@@ -38,6 +38,9 @@ const Catalog = () => {
               price={p.price}
               name={p.name}
               key={p.id}
+              category={p.category}
+              size={p.size}
+              amount={p.amount}
             />
           );
         })}

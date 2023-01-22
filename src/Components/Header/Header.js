@@ -11,7 +11,7 @@ const Header = () => {
         <ul className="header">
           <li>
             <NavLink
-              to="/main"
+              to="/"
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
               Главная
@@ -26,7 +26,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="header_logo">
-            <NavLink to="/main" className="header_logo">
+            <NavLink to="/" className="header_logo">
               _crochagstore
             </NavLink>
           </li>

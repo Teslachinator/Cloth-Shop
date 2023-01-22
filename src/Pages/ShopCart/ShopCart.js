@@ -1,44 +1,65 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
-import { Btn } from "../../Components/BtnCatalog";
+import { Btn } from "../../Components/buttons/BtnCatalog";
+import ShopCartCard from "../../Components/shopCartCard/ShopCartCard";
+import {
+  calcFirstPrice,
+  calcTotalPrice,
+  calcTotalSale,
+} from "../../Helpers/utils";
+import { Wrapper } from "../Catalog/Catalog";
+import "./shopCart.css";
 
 const BtnGoPay = styled(Btn)`
-  width: 375px;
-  height: 85px;
+  width: 367px;
+  height: 75px;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
 `;
 
 const ShopCart = () => {
+  const items = useSelector((state) => state.cart.itemsInCart);
+  const firstPrice = calcFirstPrice(items);
+  const totalPrice = calcTotalPrice(items);
+  const DILIVERY = firstPrice ? 600 : 0;
+
+  const totalSale = calcTotalSale(items);
+
   return (
-    <div>
+    <Wrapper>
       <div className="shopCart">
-        <p>Корзина</p>
-      </div>
-      <div className="cartResult">
-        <p>Итого</p>
-        <div className="cartCalculate">
-          <div className="cartCalculate_cost">
-            <p>Стоимость товара</p>
-            <p>844 ₽</p>
-          </div>
-          <div className="cartCalculate_dilivery">
-            <p>Доставка</p>
-            <p>454 ₽</p>
-          </div>
-          <div className="cartCalculate_sale">
-            <p>Скидка</p>
-            <p> - ₽</p>
-          </div>
-          <div className="cartCalculate_all">
-            <p>Всего</p>
-            <p>8456 ₽</p>
+        <div className="cartItems">
+          <p className="shopCart_title">Корзина</p>
+          {items.map((item) => (
+            <ShopCartCard item={item} />
+          ))}
+        </div>
+        <div className="cartResult">
+          <p className="shopCart_title">Итого</p>
+          <div className="cartCalculate">
+            <div className="cartCalculate_price">
+              <p>Стоимость товара</p>
+              <p>{firstPrice} ₽</p>
+            </div>
+            <div className="cartCalculate_price">
+              <p>Доставка</p>
+              <p>{DILIVERY} ₽</p>
+            </div>
+            <div className="cartCalculate_price">
+              <p>Скидка</p>
+              <p>- {totalSale} ₽</p>
+            </div>
+            <div className="cartCalculate_price total">
+              <div>Всего</div>
+              <p>{totalPrice + DILIVERY} ₽</p>
+            </div>
+            <BtnGoPay>Перейти к оформлению</BtnGoPay>
           </div>
         </div>
-        <BtnGoPay>Перейти к оформлению</BtnGoPay>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 

@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  max-height: 506px;
+  text-align: start;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.cardImg {
+  width: 360px;
+  height: 360px;
+}
+.cardName {
+  width: 65%;
+  margin: 18px 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.cardBlockPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.price {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cardPrice {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.cardSale {
+  text-decoration: line-through;
+  color: #989898;
+  margin-right: 10px;
+}
+.hidden {
+  display: none;
+  color: red;
+}

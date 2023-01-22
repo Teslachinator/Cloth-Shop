@@ -1,0 +1,40 @@
+.shopCart {
+  width: 1300px;
+  display: flex;
+  justify-content: space-between;
+}
+.cartItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.shopCart_title {
+  text-align: left;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 59px;
+}
+
+.cartCalculate_price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.cartCalculate_price p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.cartCalculate_price div {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+}
+.total {
+  height: 86px;
+  padding: 27px 0;
+  border-bottom: 1px solid #878787;
+  border-top: 1px solid #878787;
+  margin-bottom: 25px;
+}

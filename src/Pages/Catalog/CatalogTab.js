@@ -33,6 +33,9 @@ const catalogSweatersTab = [
     price: 6000,
     sale: 5490,
     id: 2,
+    composition: "состав: 25% шерсть 75% акрил",
+    size: "S",
+    amount: 12,
   },
   {
     category: "sweaters",
