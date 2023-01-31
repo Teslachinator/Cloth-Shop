@@ -1,16 +1,20 @@
 import React from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
-import shopCart from "./../../img/svg/ShopCart.svg";
+import addShopCart from "./../../img/svg/addShopCart.svg";
+import deleteShopCart from "./../../img/svg/deleteShopCart.svg";
 
 const BtnAddShopCartStyle = styled.div`
   width: 4rem;
 `;
 
-const BtnAddShopCart = ({ onClick }) => {
+const BtnAddShopCart = ({ onClick, type }) => {
+ 
+
   return (
     <BtnAddShopCartStyle>
       <button onClick={onClick}>
-        <img src={shopCart} alt="#" />
+        <img src={addShopCart} alt="#" />
       </button>
     </BtnAddShopCartStyle>
   );

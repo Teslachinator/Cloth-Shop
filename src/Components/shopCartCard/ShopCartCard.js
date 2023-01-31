@@ -17,7 +17,9 @@ const ShopCartCard = ({ item }) => {
       </div>
       <div className="shopCartCard_text">
         <div className="shopCartCard_name">{item.name}</div>
-        <div className="shopCartCard_category ff tw">{item.category}</div>
+        <div className="shopCartCard_category ff tw">
+          {item.category} {item.id}
+        </div>
         <div className="shopCartCard_group">
           <div className="shopCartCard_size ff tw">Размер {item.size}</div>
           <div className="shopCartCard_amount ff tw">
@@ -28,7 +30,7 @@ const ShopCartCard = ({ item }) => {
           <button>
             <img src={heart} alt="#" />
           </button>
-          <button id={item.id} onClick={handleDeleteClick}>
+          <button onClick={handleDeleteClick}>
             <img src={trash} alt="#" />
           </button>
         </div>

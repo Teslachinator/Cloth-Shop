@@ -37,7 +37,7 @@ const Catalog = () => {
               image={p.image}
               price={p.price}
               name={p.name}
-              key={p.id}
+              id={p.id}
               category={p.category}
               size={p.size}
               amount={p.amount}

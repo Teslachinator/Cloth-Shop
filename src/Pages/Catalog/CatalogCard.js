@@ -4,10 +4,21 @@ import "./catalog.css";
 import BtnAddShopCart from "../../Components/buttons/BtnAddShopCart";
 import { useDispatch } from "react-redux";
 import { setItemInCart } from "../../redux/cart/reducer";
+import { catalogSweatersTab } from "./catalogTab";
 
-const CatalogCard = ({ image, name, sale, price, category, amount, size }) => {
+const CatalogCard = ({
+  image,
+  name,
+  sale,
+  price,
+  category,
+  amount,
+  size,
+  id,
+}) => {
   const [cardSale, setcardSale] = useState();
   const dispatch = useDispatch();
+  const selectItem = catalogSweatersTab.some((item) => item.id === id);
 
   useEffect(() => {
     if (sale === 0) {
@@ -20,7 +31,7 @@ const CatalogCard = ({ image, name, sale, price, category, amount, size }) => {
   const handleClick = (event) => {
     event.stopPropagation();
     dispatch(
-      setItemInCart({ image, name, sale, price, size, category, amount })
+      setItemInCart({ image, name, sale, price, size, category, amount, id })
     );
   };
 
@@ -33,7 +44,10 @@ const CatalogCard = ({ image, name, sale, price, category, amount, size }) => {
           <div className={cardSale}>{price}</div>
           <div className="cardPrice ">{sale ? sale : price} ₽</div>
         </div>
-        <BtnAddShopCart onClick={handleClick} />
+        <BtnAddShopCart
+          type={selectItem ? "add" : "delete"}
+          onClick={handleClick}
+        />
       </div>
     </div>
   );
