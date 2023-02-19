@@ -1,6 +1,6 @@
 .main {
   padding: 0 50px;
-  width: 1300px;
+  max-width: 1300px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -22,6 +22,7 @@ const CatalogSortTab = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+
   gap: 33px;
 `;
 
@@ -30,7 +31,7 @@ const Catalog = () => {
     <Wrapper>
       <CatalogSweaters>свитеры</CatalogSweaters>
       <CatalogSortTab>
-        {catalogSweatersTab.map((p, index) => {
+        {catalogSweatersTab.map((p) => {
           return (
             <CatalogCard
               sale={p.sale}

@@ -23,6 +23,7 @@ footer {
 .about {
   display: flex;
   flex-direction: column;
+  max-width: 320px;
 }
 
 .catalog {
@@ -35,6 +36,7 @@ footer {
 }
 
 .main-Foot p {
+  width: 100%;
   margin-bottom: 15px;
   color: #989898;
   font-weight: 400;

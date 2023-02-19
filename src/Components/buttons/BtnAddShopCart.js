@@ -9,8 +9,6 @@ const BtnAddShopCartStyle = styled.div`
 `;
 
 const BtnAddShopCart = ({ onClick, type }) => {
- 
-
   return (
     <BtnAddShopCartStyle>
       <button onClick={onClick}>

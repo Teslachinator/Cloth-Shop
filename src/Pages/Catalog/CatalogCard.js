@@ -45,7 +45,7 @@ const CatalogCard = ({
           <div className="cardPrice ">{sale ? sale : price} ₽</div>
         </div>
         <BtnAddShopCart
-          type={selectItem ? "add" : "delete"}
+          // type={selectItem ? "add" : "delete"}
           onClick={handleClick}
         />
       </div>
