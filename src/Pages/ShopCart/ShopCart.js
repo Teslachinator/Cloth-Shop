@@ -21,7 +21,9 @@ const BtnGoPay = styled(Btn)`
 
 const ShopCart = () => {
   const items = useSelector((state) => state.cart.itemsInCart);
+  const amount = useSelector((state) => state.cart.amount);
   const firstPrice = calcFirstPrice(items);
+  const totalAmount = amount;
   const totalPrice = calcTotalPrice(items);
   const DILIVERY = firstPrice ? 600 : 0;
 
@@ -33,7 +35,7 @@ const ShopCart = () => {
         <div className="cartItems">
           <p className="shopCart_title">Корзина</p>
           {items.map((item) => (
-            <ShopCartCard item={item} />
+            <ShopCartCard key={item.id} item={item} />
           ))}
         </div>
         <div className="cartResult">
@@ -42,6 +44,10 @@ const ShopCart = () => {
             <div className="cartCalculate_price">
               <p>Стоимость товара</p>
               <p>{firstPrice} ₽</p>
+            </div>
+            <div className="cartCalculate_price">
+              <p>Количество товаров</p>
+              <p>{totalAmount}</p>
             </div>
             <div className="cartCalculate_price">
               <p>Доставка</p>
@@ -53,7 +59,7 @@ const ShopCart = () => {
             </div>
             <div className="cartCalculate_price total">
               <div>Всего</div>
-              <p>{totalPrice + DILIVERY} ₽</p>
+              <p>{totalPrice * amount + DILIVERY} ₽</p>
             </div>
             <BtnGoPay>Перейти к оформлению</BtnGoPay>
           </div>

@@ -22,6 +22,7 @@ const catalogSweatersTab = [
     price: 3000,
     sale: 0,
     id: 1,
+    amount: 1,
   },
   {
     category: "sweaters",
@@ -35,7 +36,7 @@ const catalogSweatersTab = [
     id: 2,
     composition: "состав: 25% шерсть 75% акрил",
     size: "S",
-    amount: 12,
+    amount: 1,
   },
   {
     category: "sweaters",
@@ -44,6 +45,7 @@ const catalogSweatersTab = [
     price: 5000,
     sale: 0,
     id: 3,
+    amount: 1,
   },
 ];
 

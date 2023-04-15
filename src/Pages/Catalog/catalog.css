@@ -9,10 +9,12 @@
   line-height: 24px;
 }
 .cardImg {
+  border-radius: 5%;
   max-width: 360px;
   max-height: 360px;
 }
 .cardName {
+  text-align: left;
   width: 65%;
   margin: 18px 0;
   font-weight: 600;

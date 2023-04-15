@@ -7,6 +7,7 @@
   border-bottom: 1px solid #878787;
 }
 .shopCartCard_img {
+  border-radius: 5%;
   width: 187px;
   height: 187px;
 }

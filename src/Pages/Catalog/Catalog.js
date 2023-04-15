@@ -31,9 +31,10 @@ const Catalog = () => {
     <Wrapper>
       <CatalogSweaters>свитеры</CatalogSweaters>
       <CatalogSortTab>
-        {catalogSweatersTab.map((p) => {
+        {catalogSweatersTab.map((p, index) => {
           return (
             <CatalogCard
+              key={index}
               sale={p.sale}
               image={p.image}
               price={p.price}

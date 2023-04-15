@@ -8,7 +8,7 @@ import { deleteItemFromCart } from "../../redux/cart/reducer";
 const ShopCartCard = ({ item }) => {
   const dispatch = useDispatch();
   const handleDeleteClick = () => {
-    dispatch(deleteItemFromCart(item.id));
+    dispatch(deleteItemFromCart(item));
   };
   return (
     <div className="shopCartCard">

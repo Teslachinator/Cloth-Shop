@@ -10,6 +10,11 @@ import Main from "./Pages/Main/Main";
 import ShopCart from "./Pages/ShopCart/ShopCart";
 import { store } from "./redux";
 
+// добавить логику для избранного
+// Fix Css
+// добавить страницу с товаром
+// мобильная версия,бургер меню,
+
 function App() {
   return (
     <Provider store={store}>

@@ -73,8 +73,8 @@ const Main = () => {
     <Carousel infinite>
       {mainCategory.map((p, index) => {
         return (
-          <Carousel.Page>
-            <div key={index} className="main">
+          <Carousel.Page key={index}>
+            <div className="main">
               <div className="slider_logo">{p.title}</div>
               <div className="aboutProd">
                 <div>

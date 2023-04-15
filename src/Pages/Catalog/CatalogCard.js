@@ -29,7 +29,7 @@ const CatalogCard = ({
   }, []);
 
   const handleClick = (event) => {
-    event.stopPropagation();
+    // event.stopPropagation();
     dispatch(
       setItemInCart({ image, name, sale, price, size, category, amount, id })
     );
@@ -37,7 +37,7 @@ const CatalogCard = ({
 
   return (
     <div className="card">
-      <img className="cardImg" src={image} alt="@" />
+      <img className="cardImg" src={image} alt="#" />
       <div className="cardName">{name}</div>
       <div className="cardBlockPrice">
         <div className="cardBlockPrice price">
@@ -45,7 +45,7 @@ const CatalogCard = ({
           <div className="cardPrice ">{sale ? sale : price} ₽</div>
         </div>
         <BtnAddShopCart
-          // type={selectItem ? "add" : "delete"}
+          type={selectItem ? "add" : "delete"}
           onClick={handleClick}
         />
       </div>
