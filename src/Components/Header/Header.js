@@ -7,9 +7,9 @@ const Header = () => {
     normalLink = "head";
   return (
     <header>
-      <nav>
-        <ul className="header">
-          <li>
+      <nav className="navbar navbar-expand-lg">
+        <ul className="container-fluid contain">
+          <li className="nav-item">
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
@@ -17,7 +17,7 @@ const Header = () => {
               Главная
             </NavLink>
           </li>
-          <li>
+          <li className="nav-item">
             <NavLink
               to="/catalog"
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
@@ -25,12 +25,12 @@ const Header = () => {
               Каталог
             </NavLink>
           </li>
-          <li className="header_logo">
+          <li className="header_logo nav-item">
             <NavLink to="/" className="header_logo">
               _crochagstore
             </NavLink>
           </li>
-          <li>
+          <li className="nav-item">
             <NavLink
               to="/favorites"
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
@@ -38,7 +38,7 @@ const Header = () => {
               Избранное
             </NavLink>
           </li>
-          <li>
+          <li className="nav-item">
             <NavLink
               to="/cart"
               className={({ isActive }) => (isActive ? activeLink : normalLink)}

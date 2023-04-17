@@ -12,21 +12,22 @@ const ShopCartCard = ({ item }) => {
   };
   return (
     <div className="shopCartCard">
-      <div className="shopCartCard_img">
-        <img className="shopCartCard_img" src={item.image} alt="" />
+      <div>
+        <img className="shopCartCard__img" src={item.image} alt="#" />
       </div>
-      <div className="shopCartCard_text">
-        <div className="shopCartCard_name">{item.name}</div>
-        <div className="shopCartCard_category ff tw">
-          {item.category} {item.id}
+      <div className="shopCartCard__info">
+        <div className="shopCartCard__title ">
+          <h4 className="shopCartCard__title_name">{item.name}</h4>
+          <p className="shopCartCard__title_name">
+            {item.sale ? item.sale : item.price} ₽
+          </p>
         </div>
-        <div className="shopCartCard_group">
-          <div className="shopCartCard_size ff tw">Размер {item.size}</div>
-          <div className="shopCartCard_amount ff tw">
-            Количество{item.amount}
-          </div>
+        <div className="shopCartCard__category">{item.category}</div>
+        <div className="shopCartCard__category wrapp">
+          <p>Размер {item.size}</p>
+          <p>Количество {item.amount}</p>
         </div>
-        <div className="shopCartCard_btn">
+        <div className="shopCartCard__btn">
           <button>
             <img src={heart} alt="#" />
           </button>
@@ -35,9 +36,33 @@ const ShopCartCard = ({ item }) => {
           </button>
         </div>
       </div>
-      <div className="shopCartCard_price tw">
-        {item.sale ? item.sale : item.price}
+
+      {/* <div className="shopCartCard__img">
+        <img className="shopCartCard__img" src={item.image} alt="" />
       </div>
+      <div className="shopCartCard__text">
+        <div className="shopCartCard__name">{item.name}</div>
+        <div className="shopCartCard__category ff tw">
+          {item.category} {item.id}
+        </div>
+        <div className="shopCartCard__group">
+          <div className="shopCartCard__size ff tw">Размер {item.size}</div>
+          <div className="shopCartCard__amount ff tw">
+            Количество{item.amount}
+          </div>
+        </div>
+        <div className="shopCartCard__btn">
+          <button>
+            <img src={heart} alt="#" />
+          </button>
+          <button onClick={handleDeleteClick}>
+            <img src={trash} alt="#" />
+          </button>
+        </div>
+      </div>
+      <div className="shopCartCard__price tw">
+        {item.sale ? item.sale : item.price}
+      </div> */}
     </div>
   );
 };

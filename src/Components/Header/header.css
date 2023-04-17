@@ -9,6 +9,9 @@ header {
   font-weight: 300;
   margin: 23px 0;
 }
+/* .container-fluid {
+  background: none;
+} */
 .header_logo {
   font-weight: 200;
   font-size: 36px;
@@ -35,4 +38,10 @@ nav {
 .active-head {
   font-weight: 500;
   border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 530px) {
+  .contain {
+    flex-direction: column;
+  }
 }

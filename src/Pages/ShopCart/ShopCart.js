@@ -12,7 +12,7 @@ import { Wrapper } from "../Catalog/Catalog";
 import "./shopCart.css";
 
 const BtnGoPay = styled(Btn)`
-  width: 367px;
+  max-width: 367px;
   height: 75px;
   font-weight: 600;
   font-size: 20px;
@@ -34,9 +34,11 @@ const ShopCart = () => {
       <div className="shopCart">
         <div className="cartItems">
           <p className="shopCart_title">Корзина</p>
-          {items.map((item) => (
-            <ShopCartCard key={item.id} item={item} />
-          ))}
+          {items < 1 ? (
+            <div>Корзина пуста</div>
+          ) : (
+            items.map((item) => <ShopCartCard key={item.id} item={item} />)
+          )}
         </div>
         <div className="cartResult">
           <p className="shopCart_title">Итого</p>

@@ -2,24 +2,28 @@ import React from "react";
 import styled from "styled-components";
 import CatalogCard from "./CatalogCard";
 import { catalogSweatersTab } from "./catalogTab";
+import addShopCart from "./../../img/svg/addShopCart.svg";
 
 export const Wrapper = styled.div`
   max-width: 1300px;
+  width: 100%;
+  padding: 10px;
   margin: 103px auto;
 `;
 
 const CatalogSweaters = styled.div`
   text-align: start;
   font-weight: 500;
-  font-size: 52px;
+  font-size: calc(30px + 2vw);
   line-height: 63px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  margin-bottom: 101px;
+  margin: 0;
 `;
 
 const CatalogSortTab = styled.div`
   width: 100%;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
 
@@ -28,9 +32,9 @@ const CatalogSortTab = styled.div`
 
 const Catalog = () => {
   return (
-    <Wrapper>
+    <Wrapper className="container">
       <CatalogSweaters>свитеры</CatalogSweaters>
-      <CatalogSortTab>
+      <CatalogSortTab className="row">
         {catalogSweatersTab.map((p, index) => {
           return (
             <CatalogCard

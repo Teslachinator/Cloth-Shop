@@ -36,7 +36,7 @@ const CatalogCard = ({
   };
 
   return (
-    <div className="card">
+    <div className="cataplo__card">
       <img className="cardImg" src={image} alt="#" />
       <div className="cardName">{name}</div>
       <div className="cardBlockPrice">
@@ -44,10 +44,10 @@ const CatalogCard = ({
           <div className={cardSale}>{price}</div>
           <div className="cardPrice ">{sale ? sale : price} ₽</div>
         </div>
-        <BtnAddShopCart
+        {/* <BtnAddShopCart
           type={selectItem ? "add" : "delete"}
           onClick={handleClick}
-        />
+        /> */}
       </div>
     </div>
   );

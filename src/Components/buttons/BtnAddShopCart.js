@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import styled from "styled-components";
 import addShopCart from "./../../img/svg/addShopCart.svg";
 import deleteShopCart from "./../../img/svg/deleteShopCart.svg";

@@ -3,9 +3,9 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="main-Foot">
-        <div className="catalog">
+    <footer className="container-fluid">
+      <div className="footer row">
+        <div className="footer__info">
           <p>Каталог</p>
           <ul>
             <li>Свитеры</li>
@@ -14,7 +14,7 @@ const Footer = () => {
             <li>Акции</li>
           </ul>
         </div>
-        <div className="help">
+        <div className="footer__info">
           <p>Помощь покупателю</p>
           <ul>
             <li>Доставка и оплата</li>
@@ -23,7 +23,7 @@ const Footer = () => {
             <li>Персональный заказ</li>
           </ul>
         </div>
-        <div className="about">
+        <div className="footer__info">
           <p>О НАС</p>
           <ul>
             <li>Контакты</li>

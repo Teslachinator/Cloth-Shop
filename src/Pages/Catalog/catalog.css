@@ -1,4 +1,4 @@
-.card {
+.cataplo__card {
   display: flex;
   flex-direction: column;
   max-width: 360px;
@@ -22,6 +22,7 @@
   line-height: 24px;
 }
 .cardBlockPrice {
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
