@@ -2,7 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import BtnAddShopCart from "../../../Components/buttons/BtnAddShopCart";
 import { catalogSweatersTab } from "../catalogTab";
-import { setItemInCart } from "../../../redux/reducers/shopReducer";
+import {
+  setFavoritesItem,
+  setItemInCart,
+} from "../../../redux/reducers/shopReducer";
 import { BtnGoPay } from "../../ShopCart/ShopCart";
 import heart from "./../../../img/svg/HeartItem.svg";
 import { Wrapper } from "../Catalog";
@@ -46,7 +49,10 @@ const CatalogItem = () => {
             >
               Добавить в корзину
             </BtnGoPay>
-            <BtnGoPay width="101px">
+            <BtnGoPay
+              width="101px"
+              onClick={() => dispatch(setFavoritesItem(item))}
+            >
               <img src={heart} alt="#"></img>
             </BtnGoPay>
           </div>
