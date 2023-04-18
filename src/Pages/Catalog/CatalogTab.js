@@ -3,6 +3,7 @@ import photo2n1 from "./../../img/mainPhoto/2.png";
 import photo2n2 from "./../../img/mainPhoto/111.png";
 import photo2n3 from "./../../img/mainPhoto/112.png";
 import photo2n4 from "./../../img/mainPhoto/113.png";
+import photo2n5 from "./../../img/mainPhoto/114.png";
 import photo3 from "./../../img/mainPhoto/image 1.png";
 import photo4 from "./../../img/mainPhoto/11.png";
 import photoHatn1 from "./../../img/mainPhoto/12.png";
@@ -17,7 +18,7 @@ import photo8 from "./../../img/mainPhoto/16.png";
 const catalogSweatersTab = [
   {
     category: "sweaters",
-    image: `${photo1}`,
+    image: photo1,
     name: "Укорочённый свитер «скоро осень» 🐛",
     price: 3000,
     sale: 0,
@@ -26,10 +27,11 @@ const catalogSweatersTab = [
   },
   {
     category: "sweaters",
-    image: `${photo2n1}`,
-    additImage1: { photo2n2 },
-    additImage2: { photo2n3 },
-    additImage3: { photo2n4 },
+    image: photo2n1,
+    additImage5: photo2n5,
+    additImage1: photo2n2,
+    additImage2: photo2n3,
+    additImage3: photo2n4,
     name: "Уютный свитер оверсайз 😌",
     price: 6000,
     sale: 5490,
@@ -40,7 +42,7 @@ const catalogSweatersTab = [
   },
   {
     category: "sweaters",
-    image: `${photo3}`,
+    image: photo3,
     name: "Тёплый свитер «паучья любовь»🕷💕",
     price: 5000,
     sale: 0,

@@ -14,6 +14,7 @@ import "./shopCart.css";
 export const BtnGoPay = styled(Btn)`
   cursor: pointer;
   max-width: ${(props) => props.width || "367px"};
+  width: 100%;
   height: 75px;
   font-weight: 600;
   font-size: 20px;

@@ -45,9 +45,9 @@
   color: #989898;
   margin-right: 10px;
 }
-.hidden {
+:root .hidden {
   display: none;
-  color: red;
+  /* color: red; */
 }
 
 .cardBlockPrice img {
