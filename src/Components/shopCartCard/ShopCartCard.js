@@ -3,7 +3,7 @@ import "./shopCartCard.css";
 import heart from "./../../img/svg/Heart.svg";
 import trash from "./../../img/svg/Trash.svg";
 import { useDispatch } from "react-redux";
-import { deleteItemFromCart } from "../../redux/cart/reducer";
+import { deleteItemFromCart } from "../../redux/reducers/shopReducer";
 
 const ShopCartCard = ({ item }) => {
   const dispatch = useDispatch();

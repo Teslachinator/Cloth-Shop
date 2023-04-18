@@ -3,52 +3,52 @@ import "./catalog.css";
 
 import BtnAddShopCart from "../../Components/buttons/BtnAddShopCart";
 import { useDispatch } from "react-redux";
-import { setItemInCart } from "../../redux/cart/reducer";
+import { setItemInCart } from "../../redux/reducers/shopReducer";
 import { catalogSweatersTab } from "./catalogTab";
+import {
+  Link,
+  useNavigate,
+  NavLink,
+  unstable_HistoryRouter,
+} from "react-router-dom";
+import { setCurrentItem } from "../../redux/reducers/shopReducer";
 
-const CatalogCard = ({
-  image,
-  name,
-  sale,
-  price,
-  category,
-  amount,
-  size,
-  id,
-}) => {
-  const [cardSale, setcardSale] = useState();
+const CatalogCard = ({ item }) => {
+  // const [cardSale, setcardSale] = useState();
+  // const selectItem = catalogSweatersTab.some((items) => items.id === item.id);
   const dispatch = useDispatch();
-  const selectItem = catalogSweatersTab.some((item) => item.id === id);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    if (sale === 0) {
-      setcardSale("hidden");
-    } else {
-      setcardSale("cardSale cardPrice");
-    }
-  }, []);
-
-  const handleClick = (event) => {
-    // event.stopPropagation();
-    dispatch(
-      setItemInCart({ image, name, sale, price, size, category, amount, id })
-    );
+  const handleShopCart = () => {
+    dispatch(setCurrentItem(item));
+    navigate("/catalog/item", { replace: true });
+    console.log(item);
   };
 
+  // const handleClick = (event) => {
+  //   dispatch(setItemInCart({ item }));
+  // };
+
   return (
-    <div className="cataplo__card">
-      <img className="cardImg" src={image} alt="#" />
-      <div className="cardName">{name}</div>
+    <div className="cataplo__card" onClick={handleShopCart}>
+      {/* <Link to={`/catalog/${item.id}`}  */}
+      <img className="cardImg" src={item.image} alt="#" />
+      <div className="cardName">{item.name}</div>
       <div className="cardBlockPrice">
         <div className="cardBlockPrice price">
-          <div className={cardSale}>{price}</div>
-          <div className="cardPrice ">{sale ? sale : price} ₽</div>
+          <div className={item.sale === 0 ? "hidden" : "cardSale cardPrice"}>
+            {item.price}
+          </div>
+          <div className="cardPrice ">
+            {item.sale ? item.sale : item.price} ₽
+          </div>
         </div>
         {/* <BtnAddShopCart
           type={selectItem ? "add" : "delete"}
           onClick={handleClick}
         /> */}
       </div>
+      {/* </Link> */}
     </div>
   );
 };

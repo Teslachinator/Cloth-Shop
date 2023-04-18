@@ -39,14 +39,15 @@ const Catalog = () => {
           return (
             <CatalogCard
               key={index}
-              sale={p.sale}
-              image={p.image}
-              price={p.price}
-              name={p.name}
-              id={p.id}
-              category={p.category}
-              size={p.size}
-              amount={p.amount}
+              item={p}
+              // sale={p.sale}
+              // image={p.image}
+              // price={p.price}
+              // name={p.name}
+              // id={p.id}
+              // category={p.category}
+              // size={p.size}
+              // amount={p.amount}
             />
           );
         })}

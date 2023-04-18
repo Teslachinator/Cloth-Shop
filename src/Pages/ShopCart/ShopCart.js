@@ -11,8 +11,9 @@ import {
 import { Wrapper } from "../Catalog/Catalog";
 import "./shopCart.css";
 
-const BtnGoPay = styled(Btn)`
-  max-width: 367px;
+export const BtnGoPay = styled(Btn)`
+  cursor: pointer;
+  max-width: ${(props) => props.width || "367px"};
   height: 75px;
   font-weight: 600;
   font-size: 20px;

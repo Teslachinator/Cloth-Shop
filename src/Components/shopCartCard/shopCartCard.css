@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 13px;
-  justify-content: start;
+  justify-content: flex-start;
   padding-bottom: 56px;
   border-bottom: 1px solid #878787;
 }
