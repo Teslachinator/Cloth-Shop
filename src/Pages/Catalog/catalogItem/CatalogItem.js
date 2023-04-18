@@ -43,6 +43,7 @@ const CatalogItem = () => {
           </div>
           <div className="item__btns">
             <BtnGoPay
+              className="btn_b"
               width="284px"
               type={selectItem ? "add" : "delete"}
               onClick={handleClick}
@@ -50,6 +51,7 @@ const CatalogItem = () => {
               Добавить в корзину
             </BtnGoPay>
             <BtnGoPay
+              className="btn_b"
               width="101px"
               onClick={() => dispatch(setFavoritesItem(item))}
             >
@@ -58,8 +60,7 @@ const CatalogItem = () => {
           </div>
           <div className="item__info">
             <p>{item.composition}</p>
-            <p>{item.category}</p>
-            <p>{item.category}</p>
+            <p>{item.info}</p>
           </div>
         </div>
       </section>

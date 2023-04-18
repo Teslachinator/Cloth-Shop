@@ -21,7 +21,7 @@ const BtnAddFavourites = styled(Btn)`
 
 const BtnShopCart = () => {
   return (
-    <BtnAdd>
+    <BtnAdd className="btn_b">
       <BtnAddShopCart>Добавить в корзину</BtnAddShopCart>
       <BtnAddFavourites>
         <svg

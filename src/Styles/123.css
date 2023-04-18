@@ -2,6 +2,17 @@
 a {
   color: #060606;
 }
+
+.btn_b:hover {
+  transition: 0.5s;
+  box-shadow: 8px -8px 0 0 black;
+}
+.btn_b:active {
+  transition: 0.1s;
+  color: #fec2c2;
+  background: #000000;
+  box-shadow: 5px -5px 0 0 #fec2c2;
+}
 .row {
   margin: 0px;
 }

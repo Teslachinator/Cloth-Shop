@@ -2,7 +2,7 @@ import React from "react";
 import arrow from "./../../img/svg/ArrowL.svg";
 import styled from "styled-components";
 
-export const Btn = styled.a`
+export const Btn = styled.button`
   padding: 10px;
   display: flex;
   font-weight: 600;

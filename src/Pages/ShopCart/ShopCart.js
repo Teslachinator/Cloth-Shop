@@ -65,7 +65,7 @@ const ShopCart = () => {
               <div>Всего</div>
               <p>{totalPrice * amount + DILIVERY} ₽</p>
             </div>
-            <BtnGoPay>Перейти к оформлению</BtnGoPay>
+            <BtnGoPay className="btn_b">Перейти к оформлению</BtnGoPay>
           </div>
         </div>
       </div>

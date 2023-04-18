@@ -7,9 +7,9 @@ const BtnAddShopCartStyle = styled.div`
   width: 4rem;
 `;
 
-const BtnAddShopCart = ({ onClick, type }) => {
+const BtnAddShopCart = (onClick) => {
   return (
-    <BtnAddShopCartStyle>
+    <BtnAddShopCartStyle className="btn_b">
       <button onClick={onClick}>
         <img src={addShopCart} alt="#" />
       </button>

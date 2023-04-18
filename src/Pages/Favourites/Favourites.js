@@ -2,7 +2,6 @@ import React from "react";
 import "./favourites.css";
 import { useDispatch, useSelector } from "react-redux";
 import CatalogCard from "../Catalog/CatalogCard";
-import { Wrapper } from "../Catalog/Catalog";
 import { deleteFavoritesItem } from "../../redux/reducers/shopReducer";
 
 const Favourites = () => {

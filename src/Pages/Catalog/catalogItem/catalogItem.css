@@ -3,6 +3,7 @@
   justify-content: space-around;
   gap: 10px;
 }
+
 .item__img img {
   object-fit: cover;
   border-radius: 5px;

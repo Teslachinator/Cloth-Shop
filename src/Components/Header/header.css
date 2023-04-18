@@ -9,9 +9,7 @@ header {
   font-weight: 300;
   margin: 23px 0;
 }
-/* .container-fluid {
-  background: none;
-} */
+
 .header_logo {
   font-weight: 200;
   font-size: 36px;
@@ -26,7 +24,21 @@ nav {
   text-align: center;
   justify-content: space-between;
 }
-.header li {
+.contain li:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+  text-shadow: 5px 5px 5px #000;
+}
+.contain li:active {
+  transition: 0.1s;
+
+  text-shadow: none;
+}
+.contain li {
+  transition: 0.5s;
+  transform: scale(1);
+}
+.contain li {
   margin: auto;
   font-weight: 300;
   text-transform: uppercase;
