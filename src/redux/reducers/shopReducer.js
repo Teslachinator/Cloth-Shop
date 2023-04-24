@@ -3,14 +3,16 @@ const { createSlice } = require("@reduxjs/toolkit");
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    itemsInCart: [],
-    amount: 0,
-    currentItem: {},
-    favoritesItem: [],
+    itemsInCart: JSON.parse(localStorage.getItem("cart")) || [],
+    // amount: JSON.parse(localStorage.getItem("cart")) || 0,
+    amount: JSON.parse(localStorage.getItem("amount")) || 0,
+    currentItem: JSON.parse(localStorage.getItem("cartCard")) || {},
+    favoritesItem: JSON.parse(localStorage.getItem("cartFavorite")) || [],
   },
   reducers: {
     setCurrentItem(state, action) {
       state.currentItem = action.payload;
+      localStorage.setItem("cartCard", JSON.stringify(state.currentItem));
     },
     setFavoritesItem(state, action) {
       const existingItem = state.favoritesItem.find(
@@ -23,10 +25,11 @@ const cartSlice = createSlice({
       } else {
         state.favoritesItem.push(action.payload);
       }
-      console.log(state.favoritesItem);
+      localStorage.setItem("cartFavorite", JSON.stringify(state.favoritesItem));
     },
-    deleteFavoritesItem(state, action) {
+    deleteFavoritesItem(state) {
       state.favoritesItem = [];
+      localStorage.setItem("cartFavorite", JSON.stringify(state.favoritesItem));
     },
     setItemInCart(state, action) {
       const newItem = action.payload;
@@ -39,6 +42,8 @@ const cartSlice = createSlice({
         state.itemsInCart.push(newItem);
       }
       state.amount += newItem.amount;
+      localStorage.setItem("amount", JSON.stringify(state.amount));
+      localStorage.setItem("cart", JSON.stringify(state.itemsInCart));
     },
     deleteItemFromCart(state, action) {
       const newItem = action.payload;
@@ -49,6 +54,11 @@ const cartSlice = createSlice({
         (catalogSweatersTab) => catalogSweatersTab.id !== action.payload.id
       );
       state.amount -= existingItem.amount;
+      if (state.itemsInCart === []) {
+        state.amount = 0;
+      }
+      localStorage.setItem("amount", JSON.stringify(state.amount));
+      localStorage.setItem("cart", JSON.stringify(state.itemsInCart));
     },
   },
 });

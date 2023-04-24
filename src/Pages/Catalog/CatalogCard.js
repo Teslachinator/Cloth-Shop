@@ -12,7 +12,6 @@ const CatalogCard = ({ item }) => {
   const handleShopCart = () => {
     dispatch(setCurrentItem(item));
     navigate("/catalog/item", { replace: true });
-    console.log(item);
   };
 
   return (
