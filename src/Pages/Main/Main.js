@@ -40,7 +40,7 @@ const mainCategory = [
     photo3: ph6,
     about: (
       <p className="about">
-        <span>Свитеры вяжутся из пряжи состоящей на 100% из шерсти.</span>{" "}
+        <span>Свитеры вяжутся из пряжи состоящей на 100% из шерсти.</span>
         <br />
         <span>Производится вся нужная обработка изделия.</span> <br />
         <span>Полностью ручная работа авторские дизайны.</span> <br /> Любовь к
@@ -80,13 +80,12 @@ const Main = () => {
                 <div>
                   <h3>О продукте:</h3>
                   {p.about}
-                  {/* <p className="text">{p.about}</p> */}
                 </div>
 
                 <div className="sweatersPhotos">
-                  <img className="photo1" src={p.photo1} alt="#" />
-                  <img className="photo2" src={p.photo2} alt="#" />
-                  <img className="photo3" src={p.photo3} alt="#" />
+                  <img cover className="photo1" src={p.photo1} alt="#" />
+                  <img cover className="photo2" src={p.photo2} alt="#" />
+                  <img cover className="photo3" src={p.photo3} alt="#" />
                 </div>
               </div>
 

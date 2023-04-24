@@ -24,12 +24,13 @@ function App() {
           <ScrollToTop />
           <Header />
           <Routes>
-            <Route exact path="/" element={<Main />} />
+            <Route exact path="/Cloth-Shop" element={<Main />} />
             {/* <Route exact path="/" element={<CatalogItem />} /> */}
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/favorites" element={<Favourites />} />
             <Route path="/cart" element={<ShopCart />} />
             <Route path="/catalog/:id" element={<CatalogItem />} />
+            <Route path="*" element={<div>Страницы не существует</div>} />
           </Routes>
           <Footer />
         </div>

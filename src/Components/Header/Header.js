@@ -11,7 +11,7 @@ const Header = () => {
         <ul className="container-fluid contain">
           <li className="nav-item">
             <NavLink
-              to="/"
+              to="/Cloth-Shop"
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
               Главная
@@ -26,7 +26,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="header_logo nav-item">
-            <NavLink to="/" className="header_logo">
+            <NavLink to="/Cloth-Shop" className="header_logo">
               _crochagstore
             </NavLink>
           </li>

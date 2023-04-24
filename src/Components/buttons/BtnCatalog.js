@@ -21,8 +21,10 @@ const BtnGoCatalog = styled(Btn)`
 `;
 
 const Img = styled.img`
-  width: 74px;
-  height: 16px;
+  padding: 0 auto;
+  max-width: 74px;
+  width: 100%;
+  max-height: 16px;
 `;
 
 const BtnCatalog = () => {
@@ -30,7 +32,7 @@ const BtnCatalog = () => {
     <BtnGoCatalog href="#">
       <p>Каталог</p>
 
-      <Img src={arrow} alt="" />
+      <Img src={arrow} alt="#" />
     </BtnGoCatalog>
   );
 };

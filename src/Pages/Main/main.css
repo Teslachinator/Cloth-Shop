@@ -23,7 +23,6 @@
 }
 
 .slider_logo p {
-  text-align: "." justify;
   width: 1168px;
 
   font-weight: 800;
@@ -68,10 +67,12 @@ h3 {
 
 .bottom {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 1200px;
 }
 .bottom p {
+  margin: 0;
   text-align: left;
   max-width: 268px;
   font-weight: 600;

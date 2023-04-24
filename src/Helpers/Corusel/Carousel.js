@@ -15,8 +15,8 @@ export const MainContainer = styled.div`
   height: max-content;
   display: flex;
   justify-content: space-between;
-  width: 87.5em;
-  /* width: 100%; */
+  max-width: 1400px;
+  width: 100%;
   margin: 36px 0;
 `;
 export const MainWindow = styled.div`
