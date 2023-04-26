@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Cloth-Shop/static/css/main.f565fa5b.css",
-    "main.js": "/Cloth-Shop/static/js/main.8d74db1d.js",
+    "main.css": "/Cloth-Shop/static/css/main.2957029a.css",
+    "main.js": "/Cloth-Shop/static/js/main.ae0a0b19.js",
     "static/media/Rectangle.png": "/Cloth-Shop/static/media/Rectangle.0405ccba094dd94767a5.png",
     "static/media/1.png": "/Cloth-Shop/static/media/1.ad21395cc9d23343b67d.png",
     "static/media/16.png": "/Cloth-Shop/static/media/16.bc5bf4e9797572067a08.png",
@@ -35,12 +35,12 @@
     "static/media/Heart.svg": "/Cloth-Shop/static/media/Heart.dd43e68e794422f4e716408c1ae62caa.svg",
     "static/media/IconR.svg": "/Cloth-Shop/static/media/IconR.9ee00f7b7cfe7175fb8ca15f11ab0585.svg",
     "static/media/IconL.svg": "/Cloth-Shop/static/media/IconL.e58284d7965ad2910f881c667f802400.svg",
-    "static/media/ArrowL.svg": "/Cloth-Shop/static/media/ArrowL.d17bcb44f20181f5622c84cf029458c1.svg",
-    "main.f565fa5b.css.map": "/Cloth-Shop/static/css/main.f565fa5b.css.map",
-    "main.8d74db1d.js.map": "/Cloth-Shop/static/js/main.8d74db1d.js.map"
+    "static/media/ArrowL.svg": "/Cloth-Shop/static/media/ArrowL.eeb092804fe9bab2d4c7aa92aad575e5.svg",
+    "main.2957029a.css.map": "/Cloth-Shop/static/css/main.2957029a.css.map",
+    "main.ae0a0b19.js.map": "/Cloth-Shop/static/js/main.ae0a0b19.js.map"
   },
   "entrypoints": [
-    "static/css/main.f565fa5b.css",
-    "static/js/main.8d74db1d.js"
+    "static/css/main.2957029a.css",
+    "static/js/main.ae0a0b19.js"
   ]
 }
