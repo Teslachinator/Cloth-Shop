@@ -4,7 +4,6 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: {
     itemsInCart: JSON.parse(localStorage.getItem("cart")) || [],
-    // amount: JSON.parse(localStorage.getItem("cart")) || 0,
     amount: JSON.parse(localStorage.getItem("amount")) || 0,
     currentItem: JSON.parse(localStorage.getItem("cartCard")) || {},
     favoritesItem: JSON.parse(localStorage.getItem("cartFavorite")) || [],
@@ -20,7 +19,7 @@ const cartSlice = createSlice({
       );
       if (existingItem) {
         state.favoritesItem = state.favoritesItem.filter(
-          (catalogSweatersTab) => catalogSweatersTab.id !== action.payload.id
+          (item) => item.id !== action.payload.id
         );
       } else {
         state.favoritesItem.push(action.payload);
@@ -51,7 +50,7 @@ const cartSlice = createSlice({
         (item) => item.id === newItem.id
       );
       state.itemsInCart = state.itemsInCart.filter(
-        (catalogSweatersTab) => catalogSweatersTab.id !== action.payload.id
+        (item) => item.id !== action.payload.id
       );
       state.amount -= existingItem.amount;
       if (state.itemsInCart === []) {

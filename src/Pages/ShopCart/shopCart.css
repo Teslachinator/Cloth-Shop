@@ -19,9 +19,12 @@
   font-weight: 600;
   font-size: 26px;
   line-height: 32px;
-  margin-bottom: 59px;
+  /* margin-bottom: 59px; */
 }
 
+.cartCalculate {
+  margin-top: 56px;
+}
 .cartCalculate_price {
   display: flex;
   justify-content: space-between;
